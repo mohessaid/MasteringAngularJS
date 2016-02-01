@@ -1,6 +1,6 @@
 'use strict';
 angular.module('app', [])
-    .controller('MainCrt', function(){
+    .controller('MainCrtl', function(){
        var main = this;
        main.name = ""; 
     });
