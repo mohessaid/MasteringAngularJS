@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ng-IF Demo I</title>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+  <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="MainController">
+  <div class="container-fuild">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-1 panel panel-default panel-body btn-group-vertical">
+        <button ng-click="var1Toggle()" class="btn {{var1? 'btn-success': 'btn-danger'}}"><span class="glyphicon {{var1? 'glyphicon-eye-open': 'glyphicon-eye-close'}}" aria-hidden="true"></span> Toggle Var 1!</button>
+        <button ng-click="var2Toggle()" class="btn {{var2? 'btn-success': 'btn-danger'}}"><span class="glyphicon {{var2? 'glyphicon-eye-open': 'glyphicon-eye-close'}}" aria-hidden="true"></span> Toggle Var 2!</button>
+      </div>
+      <div class="col-xs-2 col-xs-offset-1 panel panel-default panel-body btn-group-vertical">
+        <button ng-if="var1" class="btn btn-primary">Var1</button>
+        <button ng-if="var2" class="btn btn-primary">Var2</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
