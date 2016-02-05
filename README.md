@@ -1,4 +1,5 @@
-#Mastering AngularJS
---------------------
-I am learning AngularJS and putting the examples in this repository, in addition
-you can test the results using the project page.
+#Github Pages:
+--------------
+This branche act as demonstration for of what I am writing in the master branche.
+you can check this [link][1].
+[1]: http://mohessaid.github.io/MasteringAngularJS/
