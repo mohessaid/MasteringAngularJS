@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+    <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="main" class="panel">
+    <div ng-controller="child">
+      <p>{{$root.lang}} : {{toggleLang($root.lang)}}</p>
+    </div>
+    <button ng-click="translate('en')" class="btn btn-primary">en</button>
+    <button ng-click="translate('ar')" class="btn btn-primary">ar</button>
+    <button ng-click="translate('fr')" class="btn btn-primary">fr</button>
+  </body>
+
+</html>
