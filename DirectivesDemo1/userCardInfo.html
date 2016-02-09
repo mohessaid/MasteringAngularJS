@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">{{user.name}}</div>
+  <div class="panel-body">
+    <div>
+      <h4>Address:</h4>
+      <p>{{user.address.street}}</p>
+      <p>{{user.address.city}}</p>
+      <p>{{user.address.country}}</p>
+    </div>
+    <h4>Friends:</h4>
+    <ul>
+      <li ng-repeat="friend in user.friends">{{friend}}</li>
+    </ul>
+    <div ng-show="!!user.rank">
+      Rank : {{user.rank}}
+    </div>
+    <button class="btn btn-success" ng-show="!user.rank" ng-click="knightMe(user)">Kignth me!</button>
+  </div>
+</div>
