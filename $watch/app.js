@@ -1,22 +1,26 @@
 'use strict';
 angular.module('app', [])
     .controller('main', function($scope){
-        $scope.side = "left";
-        $scope.switchSide = function(){
-            $scope.side = $scope.side == "left"? "right" : "left";
-            console.log($scope.side);
-        };
+        $scope.langDir = "left";
+        $scope.switchDir = function(){
+            $scope.langDir = $scope.langDir === "left"? "right" : "left";
+        }
+        $scope.keepDir = function(){
+            $scope.langDir = $scope.langDir;
+        }
     })
-    .directive('watching', function(){
-        return{
-            restrict: "E",
-            templateUrl: "watching.html",
-            link: function(scope, elem, attr){
-                scope.$observe(attr['side'], function(newVal, oldVal){
-                    if (newVal !== oldVal){
-                        $log("I am watching!");
-                    }
+    .directive('side', function(){
+        return {
+            restrict: "A",
+            link: function($scope, iElem, iAttrs){
+                console.log("I'am in link");
+                iAttrs.$observe("side", function(value){
+                    console.log(iElem);
+                    console.log(newVal + "y");
+                    iElem.$addClass(newVal + "y");
+                    
                 });
             }
         };
     });
+    

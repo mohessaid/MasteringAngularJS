@@ -1,0 +1,9 @@
+.lefty{
+    direction: ltr;
+    color: red;
+    
+}
+.righty{
+    direction: rtl;
+    color: green;
+}
